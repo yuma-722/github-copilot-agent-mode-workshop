@@ -49,6 +49,9 @@
 
 ### ドキュメント作成
 
+> [!TIP]
+> 慣れている方は「Copilot に一度設計に関する一般的な質問をさせ、その質問に対する回答をコンテキストに含める形で提供する」という手法もお試しください。より自分が意図したドキュメント内容に近づけやすくなります。
+
 - このパートでは、仕様に関する以下のドキュメントを、Agent mode を使用して作成します。下記 2 ファイルの説明を把握したうえ、以降の手順で `.prompt.md` ファイルを用意し、作成を進めましょう
   - `docs/requirements.md` ：要件定義（アプリケーションやそれぞれの機能がどうあるべきか）（必須）
   - `docs/application.md` ：設計に関するアプリケーション構成、データモデルなど（必須）
@@ -62,9 +65,6 @@
 - ここまでの内容を一度コミットしておきます
 
 ### ドキュメント更新
-
-> [!TIP]
-> 慣れている方は「Copilot に一度設計に関する一般的な質問をさせ、その質問に対する回答をコンテキストに含める形で提供する」という手法もお試しください。より自分が意図したドキュメント内容に近づけやすくなります。
 
 - `docs` 配下に作成されたドキュメントを確認し、内容に不足があれば、エージェントに改善するよう指示します
   - 再度 `/requirements` や `/application` を用いて更新の指示を行います
@@ -104,8 +104,6 @@
 
 ## Step6：GitHub Actions ワークフローの実装
 
-- （オプション）Microsoft Learn MCP Server を登録しておくと、GitHub Actions のワークフロー構文に関する情報を Microsoft Learn から効率的に取得できます
-  - https://learn.microsoft.com/ja-jp/training/support/mcp
 - CI/CD に関するドキュメント（ `docs/cicd.md` ）を作成します
   - ワークショップ時間を加味して、まずは CI のみの実装で構いませんが、CD にもチャレンジする場合はインフラ定義に関するドキュメント `docs/infrastructure.md` も併せて用意することを推奨します
 - GitHub Actions ワークフローを実装するためのプロンプトを `.github/prompts/workflow.prompt.md` として作成します
@@ -113,6 +111,10 @@
 
 ## 参考
 
+- GitHub Copilot のリポジトリ カスタム命令を追加する - GitHub Enterprise Cloud Docs
+  - https://docs.github.com/ja/enterprise-cloud@latest/copilot/how-tos/configure-custom-instructions/add-repository-instructions?tool=vscode
+- Microsoft Learn MCP Server を登録しておくと、例えば Azure や .NET 、一部 GitHub 関連機能に関する内容を Microsoft Learn から効率的に取得し Copilot の実行結果に反映することができます
+  - https://learn.microsoft.com/ja-jp/training/support/mcp
 - Specification-Driven Development については、spec-kit リポジトリ内のドキュメントも併せてご参考ください
   - https://github.com/github/spec-kit/blob/main/spec-driven.md
 - GitHub Copilot で使用する各プロンプト内容に関しては、awesome-copilot リポジトリも併せてご参考ください
